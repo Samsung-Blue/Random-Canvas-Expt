@@ -1,7 +1,7 @@
 var canvas = document.getElementById("mycanvas");
 var ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth - 25;
-canvas.height = window.innerHeight - 25;
+canvas.width = window.innerWidth - 50;
+canvas.height = window.innerHeight - 50;
 circles = [];
 var count=0;
 addRandomCircles();
@@ -33,7 +33,6 @@ function addCircles(event)
 		circle.speedX = Math.floor(10*Math.random())-5;
 		circle.speedY = Math.floor(10*Math.random())-5;
 		circles.push(circle);
-		ctx.globalCompositeOperation="lighter";
 		ctx.beginPath();
 		ctx.arc(circle.posX,circle.posY,circle.radius,0,2*Math.PI);
 		ctx.fillStyle="white";
